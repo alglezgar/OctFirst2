@@ -28,10 +28,13 @@ namespace WebApplication6._2
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+            //await context.Response.WriteAsync("Hello World!");
+            //});
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
+
         }
     }
 }
